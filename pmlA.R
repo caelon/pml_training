@@ -33,6 +33,11 @@ pmlA <- function()
 	predictionGBM <- predict(modelFitGBM,  cvData.pca)
 	predictionLDA <- predict(modelFitLDA,  cvData.pca)
 	
+  confusionMatrix(predictionRF, cvData$classe)$overall["Accuracy"]
+	confusionMatrix(predictionSVM, cvData$classe)$overall["Accuracy"]
+	confusionMatrix(predictionGBM, cvData$classe)$overall["Accuracy"]
+	confusionMatrix(predictionLDA, cvData$classe)$overall["Accuracy"]
+  
 	# Combine models together
 	dataCombined <- data.frame(predictionRF,predictionSVM,predictionGBM,predictionLDA,classe=cvData$classe)
 	modelFitCombined <- train(classe ~.,method="rf", data=dataCombined)
