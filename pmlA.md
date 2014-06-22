@@ -1,6 +1,4 @@
----
-title: "Human Activity Recognition. Results Verification"
----
+
 This repository contain reproduction of analysis from Groupware <http://groupware.les.inf.puc-rio.br/har>
 
 The purpose of exercise is to create machine learning algorithm to predict activity quality from activity monitors.
@@ -54,7 +52,7 @@ testData.pca <- predict(preproc, testData[,-1])
 
 After all this steps we have datasets with the most meaningful 37 features.
 
-# Training
+### Training
 
 In this analysis  we use 4 different optimization models: random forest, SVM, GBM and LDA.
 
