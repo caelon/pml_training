@@ -122,5 +122,5 @@ Accuracy
 We gained only additional 0.1% accuracy. Not worth doing assemble for this problem.
 
 ### Results
-Given csv with proper features we can almost surely predict the class of activity for this problem. In our case random forest gave best result with accuracy 0.994647 on cross validation set.
+Given csv with proper features we can almost surely predict the class of activity for this problem. In our case random forest gave best result with **out of sample** error only **0.994647**.
 
