@@ -45,10 +45,6 @@ pmlA <- function()
 	
 	testPrediction <- predict(modelFitCombined, testDataCombined)
 	confusionMatrix(testPrediction, testData$classe)
-	
-	save(modelFitRF, modelFitSVM, modelFitGBM, modelFitLDA, pmlData, preproc, file="pmlA.RData")
-	
-	modelFitCombined
 }
 
 prepareData <- function(trainProportion = 0.6, cvProportion=0.5)
